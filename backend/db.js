@@ -3,10 +3,10 @@ import mysql from "mysql2";
 
 // Configuración de la conexión
 const connection = mysql.createConnection({
-  host: "localhost",       // tu servidor MySQL
-  user: "root",            // tu usuario MySQL
-  password: "Cafayate2026!",  //process.env.MYSQL_PASSWORD, la contraseña que pusiste al instalar
-  database: "guia_cafayate"   // la base de datos que vamos a crear
+  host: process.env.MYSQL_HOST,       // tu servidor MySQL
+  user: process.env.MYSQL_USER,           // tu usuario MySQL
+  password: process.env.MYSQL_PASSWORD,  // la contraseña que pusiste al instalar
+  database: process.env.MYSQL_DATABASE   // la base de datos que vamos a crear
 });
 
 // Conectamos
