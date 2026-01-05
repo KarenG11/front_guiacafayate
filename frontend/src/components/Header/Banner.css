@@ -1,0 +1,173 @@
+/* Banner de pantalla completa */
+.banner {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-image: url('/src/assets/header/portada.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Overlay oscuro para mejorar la legibilidad */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenido del banner */
+.banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Título principal */
+.banner-title {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #f2c94c;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.7),
+    0 0 20px rgba(242, 201, 76, 0.8),
+    0 0 30px rgba(242, 201, 76, 0.5);
+  transition: all 0.3s ease;
+  line-height: 1.2;
+}
+
+.banner-title:hover {
+  transform: scale(1.02);
+  text-shadow:
+    0 2px 15px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(242, 201, 76, 1),
+    0 0 40px rgba(242, 201, 76, 0.7);
+}
+
+/* Subtítulo con degradado */
+.banner-subtitle {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+/* Flecha de scroll */
+.banner-arrow {
+  margin-top: 3rem;
+  font-size: 3rem;
+  color: #f2c94c;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  animation: bounce 2s infinite, fadeInUp 1s ease-out 0.6s backwards;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.banner-arrow:hover {
+  transform: translateY(5px);
+  color: #fff;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .banner {
+    height: 100vh;
+  }
+
+  .banner-title {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+
+  .banner-subtitle {
+    font-size: 1.3rem;
+    max-width: 600px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  .banner {
+    height: 100vh;
+  }
+
+  .banner-content {
+    padding: 1.5rem;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+  }
+
+  .banner-subtitle {
+    font-size: 1rem;
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+  .banner {
+    height: 100vh;
+  }
+
+  .banner-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .banner-subtitle {
+    font-size: 0.9rem;
+  }
+}

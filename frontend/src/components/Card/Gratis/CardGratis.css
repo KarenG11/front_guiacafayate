@@ -1,0 +1,161 @@
+.card-gratis {
+  background-color: #ffffff;
+  border: 2px solid #4a90e2;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-gratis:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen de la card */
+.card-gratis-image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #f0f0f0;
+  position: relative;
+}
+
+.card-gratis-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-gratis:hover .card-gratis-image img {
+  transform: scale(1.05);
+}
+
+.card-gratis-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  line-height: 1.3;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+
+/* Contenido */
+.card-gratis-content {
+  padding: 0.75rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.5rem;
+}
+
+/* Descripción - oculta en mobile, visible desde tablet */
+.card-gratis-description {
+  display: none;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+/* Botones */
+.card-gratis-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.btn-gratis {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  color: white;
+}
+
+.btn-contact {
+  background: #25D366;
+}
+
+.btn-contact:hover {
+  background: #1faa52;
+}
+
+.btn-more {
+  background: #4a90e2;
+}
+
+.btn-more:hover {
+  background: #357abd;
+}
+
+/* Tablet y superior: mostrar descripción */
+@media (min-width: 769px) {
+  .card-gratis-image {
+    height: 180px;
+  }
+
+  .card-gratis-content {
+    padding: 1rem 1.25rem 1.25rem;
+    gap: 0.75rem;
+  }
+
+  .btn-gratis {
+    padding: 0.6rem;
+  }
+
+  .card-gratis-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desde 1200px: botones verticales */
+@media (min-width: 1200px) {
+  .card-gratis-actions {
+    flex-direction: column;
+  }
+
+  .btn-gratis {
+    width: 100%;
+  }
+}
+
+/* Desde 1400px: botones horizontales */
+@media (min-width: 1400px) {
+  .card-gratis-actions {
+    flex-direction: row;
+  }
+
+  .btn-gratis {
+    flex: 1;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .card-gratis-image {
+    height: 200px;
+  }
+}

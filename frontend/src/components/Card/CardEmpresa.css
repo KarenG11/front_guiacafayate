@@ -1,0 +1,181 @@
+/* CONTENEDOR BASE */
+.card-empresa {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-empresa:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* VARIANTES POR NIVEL - Todos con el mismo color azul */
+.card-empresa--oro {
+  border: 2px solid #4a90e2;
+}
+
+.card-empresa--plata {
+  border: 2px solid #4a90e2;
+}
+
+.card-empresa--bronce {
+  border: 2px solid #4a90e2;
+}
+
+.card-empresa--gratis {
+  border: 1px solid #ddd;
+}
+
+/* IMAGEN */
+.card-empresa__image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #f0f0f0;
+  position: relative;
+}
+
+.card-empresa__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-empresa:hover .card-empresa__image img {
+  transform: scale(1.05);
+}
+
+/* BADGE VERIFICADO - Todos con el mismo color azul */
+.card-empresa__verified {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(74, 144, 226, 0.95);
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* TÍTULO */
+.card-empresa__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  line-height: 1.3;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+
+/* CONTENIDO */
+.card-empresa__content {
+  padding: 0.75rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.5rem;
+}
+
+.card-empresa__address {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* BOTONES */
+.card-empresa__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.card-empresa__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.card-empresa__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* WhatsApp */
+.card-empresa__btn--contact {
+  background-color: #25D366;
+}
+
+.card-empresa__btn--contact:hover {
+  background-color: #1faa52;
+}
+
+/* Ver más - Color gris */
+.card-empresa__btn--more {
+  background-color: #95a5a6;
+}
+
+.card-empresa__btn--more:hover {
+  background-color: #7f8c8d;
+}
+
+/* RESPONSIVE */
+@media (min-width: 769px) {
+@media (min-width: 1200px) {
+  .card-empresa__actions {
+    flex-direction: column;
+  }
+
+  .card-empresa__btn {
+    width: 100%;
+  }
+}
+
+/* Desde 1400px: botones horizontales */
+@media (min-width: 1400px) {
+  .card-empresa__actions {
+    flex-direction: row;
+  }
+
+  .card-empresa__btn {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1025px) {
+  .card-empresa__image {
+    height: 200px;
+  }
+
+  .card-empresa__title {
+    font-size: 1.1rem;
+  }
+}

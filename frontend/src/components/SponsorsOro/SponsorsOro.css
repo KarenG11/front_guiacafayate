@@ -1,0 +1,153 @@
+.sponsors-oro {
+  margin-top: 50px;
+  padding: 30px 16px;
+}
+
+.sponsors-oro h2 {
+  text-align: center;
+  font-size: 1.9rem;
+  color: #b8860b;
+  margin-bottom: 24px;
+}
+
+/* GRID */
+.sponsors-oro-grid {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; /* permite varias filas */
+  gap: 20px; /* espacio entre tarjetas */
+}
+
+/* CARD */
+.sponsor-oro-card {
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  text-align: center;
+  position: relative;
+  flex: 0 0 320px; /* ancho base para cada tarjeta */
+}
+
+/* Línea superior (separador por nivel) */
+.sponsor-oro-topline {
+  height: 6px;
+  background: linear-gradient(90deg, #f2c94c, #f2994a);
+  border-radius: 14px 14px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Header */
+.sponsor-oro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.sponsor-oro-header img {
+  max-width: 120px;
+}
+
+/* Imagen destacada dentro de la tarjeta */
+.sponsor-oro-image {
+  margin-top: 12px;
+}
+.sponsor-oro-image img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.sponsor-oro-image.placeholder {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #fff7e6, #f3efe5);
+  border-radius: 8px;
+}
+
+.sponsor-oro-body {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+
+.sponsor-oro-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.sponsor-oro-logo {
+  flex: 0 0 auto;
+}
+
+.sponsor-oro-info {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/* Badge */
+.badge-oro {
+  display: none; /* ocultar texto ORO según pedido */
+}
+
+/* Textos */
+.sponsor-oro-card h3 {
+  margin: 12px 0 6px;
+  font-size: 1.2rem;
+}
+
+.sponsor-description {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.sponsor-address {
+  font-size: 0.85rem;
+  margin-top: 6px;
+  color: #666;
+}
+
+.sponsor-verified {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* Acciones */
+.sponsor-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.btn-whatsapp {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background-color: #25d366;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.btn-instagram {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background-color: #833ab4;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+}

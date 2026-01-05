@@ -1,0 +1,116 @@
+.section {
+  margin: 40px 20px 40px 0;
+}
+
+/* Asegurar que la sección ocupe todo el ancho disponible */
+.section {
+  width: 100%;
+}
+
+.section h2 {
+  text-align: left;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #f2994a;
+  margin-bottom: 20px;
+  padding: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Subcategorías */
+.section-subcategory {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.section-subcategory h3 {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* ===== CONTENEDOR GENERAL DE CARDS ===== */
+.section-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mobile: 2 columnas */
+  gap: 1.5rem;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  max-width: 100%;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+/* Todas las cards tendrán la misma altura y ancho */
+.card-oro,
+.card-plata,
+.card-bronce,
+.card-gratis,
+.card-empresa {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Altura completa del contenedor grid */
+  width: 100%; /* Ancho completo del contenedor grid */
+  max-width: 350px; /* Ancho máximo para mantener consistencia */
+}
+
+
+
+/* ===== MOBILE GENERAL ===== */
+@media (max-width: 768px) {
+  .section h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-subcategory h3 {
+    font-size: 1.2rem;
+  }
+
+  .section-cards {
+    grid-template-columns: repeat(2, 1fr); /* Mobile: 2 columnas */
+    gap: 1rem;
+    padding: 15px;
+  }
+}
+
+/* Tablet: 3 columnas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop: máximo 4 columnas */
+@media (min-width: 1025px) {
+  .section-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ================================
+   🔥 EXCEPCIÓN: SPONSORS
+   ================================ */
+
+/* Contenedor SOLO para sponsors */
+.section-cards.sponsors {
+  flex-wrap: nowrap;
+}
+
+/* Mobile sponsors: horizontal */
+@media (max-width: 480px) {
+  .section-cards.sponsors {
+    flex-direction: row;     /* 🔥 CLAVE */
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .section-cards.sponsors .card-gratis {
+    min-width: 240px;
+    max-width: 240px;
+    flex: 0 0 auto;
+  }
+}
+

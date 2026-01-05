@@ -1,0 +1,176 @@
+/* CONTENEDOR */
+.card-oro {
+  background: #ffffff;
+  border: 2px solid #4a90e2;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-oro:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGEN */
+.card-oro-image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #f0f0f0;
+  position: relative;
+}
+
+.card-oro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-oro:hover .card-oro-image img {
+  transform: scale(1.05);
+}
+
+.card-oro-verified {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(74, 144, 226, 0.95);
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.card-oro-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  line-height: 1.3;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+
+/* CONTENIDO */
+.card-oro-content {
+  padding: 0.75rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.5rem;
+}
+
+.card-oro-address {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* BOTONES */
+.card-oro-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.card-oro .btn-oro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.card-oro .btn-oro:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* WhatsApp */
+.card-oro .btn-oro.whatsapp,
+.card-oro .btn-oro.btn-contact {
+  background-color: #25D366;
+}
+
+/* Ver más */
+.card-oro .btn-oro.ver-mas,
+.card-oro .btn-oro.btn-more {
+  background-color: #4a90e2;
+}
+
+.card-oro .btn-oro.btn-more:hover {
+  background-color: #357abd;
+}
+
+/* RESPONSIVE */
+@media (min-width: 769px) {
+  .card-oro-image {
+    height: 180px;
+  }
+
+  .card-oro-content {
+    padding: 1rem 1.25rem 1.25rem;
+    gap: 0.75rem;
+  }
+
+  .card-oro .btn-oro {
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* Desde 1200px: botones verticales */
+@media (min-width: 1200px) {
+  .card-oro-actions {
+    flex-direction: column;
+  }
+
+  .card-oro .btn-oro {
+    width: 100%;
+  }
+}
+
+/* Desde 1400px: botones horizontales */
+@media (min-width: 1400px) {
+  .card-oro-actions {
+    flex-direction: row;
+  }
+
+  .card-oro .btn-oro {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1025px) {
+  .card-oro-image {
+    height: 200px;
+  }
+
+  .card-oro-title {
+    font-size: 1.1rem;
+  }
+}

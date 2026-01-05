@@ -1,0 +1,13 @@
+.readmore {
+  cursor: pointer;
+  user-select: text;
+  margin: 0.4rem 0;
+}
+.readmore .readmore-hint {
+  color: #0077cc;
+  font-weight: 600;
+  margin-left: 6px;
+}
+.readmore.expanded .readmore-hint {
+  display: none;
+}

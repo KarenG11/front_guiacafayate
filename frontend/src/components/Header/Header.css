@@ -1,0 +1,89 @@
+/* Header principal */
+.header {
+  height: 28vh;
+  background-image: url('/src/assets/header/portada.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Capa oscura para mejorar lectura */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Contenido del header */
+.header-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+
+/* Título - dorado, mayúsculas y efecto brillante */
+.header h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #f2c94c; /* dorado */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    0 0 10px rgba(242, 201, 76, 0.8); /* brillo dorado */
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.header h1:hover {
+  transform: scale(1.05);
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.6),
+    0 0 15px rgba(242, 201, 76, 1); /* más brillante al pasar el mouse */
+}
+
+/* Subtítulo - degradado más vibrante y sombra */
+.header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: linear-gradient(90deg, #f2c94c, #f2994a, #eb5757);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+}
+
+.header p:hover {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header {
+    height: 24vh;
+  }
+
+  .header h1 {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+  }
+
+  .header p {
+    font-size: 0.95rem;
+  }
+}
