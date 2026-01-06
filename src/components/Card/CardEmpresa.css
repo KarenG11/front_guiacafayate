@@ -148,6 +148,35 @@
 }
 
 /* RESPONSIVE */
+@media (max-width: 768px) {
+  .card-empresa__content {
+    padding: 0.5rem 0.75rem 0.75rem;
+  }
+
+  .card-empresa__actions {
+    gap: 0.4rem;
+  }
+
+  .card-empresa__btn {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .card-empresa__title {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .card-empresa__address {
+    font-size: 0.8rem;
+  }
+}
+
 @media (min-width: 769px) {
 @media (min-width: 1200px) {
   .card-empresa__actions {

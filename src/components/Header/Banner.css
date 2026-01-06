@@ -138,10 +138,14 @@
 @media (max-width: 768px) {
   .banner {
     height: 100vh;
+    margin-left: 0;
+    width: 100%;
   }
 
   .banner-content {
-    padding: 1.5rem;
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
   }
 
   .banner-title {
@@ -153,6 +157,7 @@
     font-size: 1rem;
     margin-top: 1rem;
     max-width: 100%;
+    padding: 0 0.5rem;
   }
 }
 

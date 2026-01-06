@@ -15,17 +15,21 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/alojamientos" element={<AlojamientosPage />} />
-          <Route path="/restaurantes" element={<RestaurantesPage />} />
-          <Route path="/comercios" element={<ComerciosPage />} />
-          <Route path="/servicios" element={<ServiciosPage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/registro" element={<Registro />} />
-        </Routes>
-        <Footer />
+        <div className="app-wrapper">
+          <Navbar />
+          <main className="app-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/alojamientos" element={<AlojamientosPage />} />
+              <Route path="/restaurantes" element={<RestaurantesPage />} />
+              <Route path="/comercios" element={<ComerciosPage />} />
+              <Route path="/servicios" element={<ServiciosPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/registro" element={<Registro />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </BrowserRouter>
     </AuthProvider>
   );

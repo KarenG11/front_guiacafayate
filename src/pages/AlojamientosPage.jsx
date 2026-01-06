@@ -2,6 +2,7 @@ import CardEmpresa from '../components/Card/CardEmpresa';
 import CategoryFilters from '../components/QuickAccess/CategoryFilters';
 import useLugares from '../hooks/useLugares';
 import useTipoCategorias from '../hooks/useTipoCategorias';
+import './AlojamientosPage.css';
 
 function AlojamientosPage() {
   const { lugares, loading: loadingLugares, error: errorLugares } = useLugares();
@@ -10,8 +11,22 @@ function AlojamientosPage() {
   const loading = loadingLugares || loadingTipos;
   const error = errorLugares || errorTipos;
 
-  if (loading) return <p>Cargando alojamientos...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) {
+    return (
+      <div className="loader-container">
+        <div className="loader-spinner"></div>
+        <p className="loader-text">Cargando alojamientos...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="error-container">
+        <p className="error-text">⚠️ Error: {error}</p>
+      </div>
+    );
+  }
 
   // Filtrar lugares que pertenecen a la categoría "Alojamiento"
   const lugaresAlojamiento = lugares.filter(lugar => {

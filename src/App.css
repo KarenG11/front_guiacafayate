@@ -23,6 +23,23 @@ body {
   overflow-x: hidden;
 }
 
+/* Layout principal para sticky footer */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1 0 auto;
+}
+
 /* Contenedor principal */
 .main-container {
   max-width: 1200px;
@@ -79,6 +96,34 @@ body {
 /* Scroll suave para anclajes */
 section[id] {
   scroll-margin-top: 90px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1rem 0.75rem;
+    padding-top: calc(70px + 1rem);
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .section-group-title {
+    font-size: 1.6rem;
+    padding: 10px 0.75rem;
+    margin-bottom: 20px;
+  }
+
+  .section-group-subtitle {
+    font-size: 1.3rem;
+    padding-left: 10px;
+    margin-bottom: 15px;
+  }
+
+  .section-group-container {
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 0;
+  }
 }
 
 /* Links generales */
