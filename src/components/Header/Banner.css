@@ -34,6 +34,14 @@
   text-align: center;
   color: white;
   animation: fadeInUp 1s ease-out;
+  margin-top: 0;
+  transform: translateY(0);
+}
+
+@media (min-width: 769px) {
+  .banner-content {
+    transform: translateY(0);
+  }
 }
 
 /* Animación de entrada */
