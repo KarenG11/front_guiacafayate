@@ -1,10 +1,11 @@
 /* CONTENEDOR BASE */
 .card-empresa {
   background: #ffffff;
+  border: 1px solid #e0e0e0;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -13,11 +14,12 @@
 .card-empresa:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: #5f5f5f;
 }
 
 /* VARIANTES POR NIVEL - Todos con el mismo color azul */
 .card-empresa--oro {
-  border: 2px solid #4a90e2;
+  border: 2px solid #dee0e2;
 }
 
 .card-empresa--plata {
@@ -132,63 +134,64 @@
 /* WhatsApp */
 .card-empresa__btn--contact {
   background-color: #25D366;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card-empresa__btn--contact:hover {
-  background-color: #1faa52;
+  background-color: #20c25a;
 }
 
 /* Ver más - Color gris */
 .card-empresa__btn--more {
   background-color: #95a5a6;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card-empresa__btn--more:hover {
-  background-color: #7f8c8d;
+  background-color: #849192;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .card-empresa__content {
-    padding: 0.5rem 0.5rem 0.75rem !important;
+    padding: 0.5rem 0.5rem 0.75rem ;
   }
 
   .card-empresa__actions {
-    gap: 0.4rem !important;
-    width: 100% !important;
+    gap: 0.4rem ;
+    width: 100% ;
   }
 
   .card-empresa__btn {
-    padding: 0.45rem 0.35rem !important;
-    font-size: 0.75rem !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    white-space: nowrap !important;
-    box-sizing: border-box !important;
+    padding: 0.45rem 0.35rem ;
+    font-size: 0.75rem ;
+    width: 100% ;
+    min-width: 0 ;
+    max-width: 100% ;
+    overflow: hidden ;
+    text-overflow: ellipsis ;
+    white-space: nowrap ;
+    box-sizing: border-box ;
   }
 
   .card-empresa__btn--contact {
-    padding: 0.45rem 0.25rem !important;
+    padding: 0.45rem 0.25rem ;
   }
 
   .card-empresa__title {
-    font-size: 0.85rem !important;
-    padding: 0.5rem 0.5rem !important;
+    font-size: 0.85rem ;
+    padding: 0.5rem 0.5rem ;
   }
 
   .card-empresa__address {
-    font-size: 0.75rem !important;
+    font-size: 0.75rem ;
   }
 
   .card-empresa__image {
-    height: 140px !important;
+    height: 140px ;
   }
 }
 
-@media (min-width: 769px) {
 @media (min-width: 1200px) {
   .card-empresa__actions {
     flex-direction: column;

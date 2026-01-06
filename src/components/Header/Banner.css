@@ -31,6 +31,7 @@
   z-index: 1;
   max-width: 900px;
   padding: 2rem;
+  padding-top: 6.5rem;
   text-align: center;
   color: white;
   animation: fadeInUp 1s ease-out;
