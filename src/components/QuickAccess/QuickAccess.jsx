@@ -22,7 +22,7 @@ function QuickAccess() {
       </section>
     );
   }
-
+//cambio
   return (
     <section className="quick-access">
       <h2 className="quick-access-title">¿Qué estás buscando?</h2>
