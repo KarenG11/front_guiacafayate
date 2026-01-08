@@ -4,13 +4,19 @@ import './Navbar.css';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const toggleCategories = () => {
+    setIsCategoriesOpen(!isCategoriesOpen);
+  };
+
   const closeMenu = () => {
     setIsOpen(false);
+    setIsCategoriesOpen(false);
   };
 
   return (
@@ -20,8 +26,8 @@ function Navbar() {
           <span className="logo-text">Guía Cafayate</span>
         </Link>
 
-        {/* Botón hamburguesa para móvil */}
-        <button 
+        {/* Botón hamburguesa */}
+        <button
           className={`navbar-toggle ${isOpen ? 'active' : ''}`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
@@ -31,27 +37,31 @@ function Navbar() {
           <span></span>
         </button>
 
-        {/* Menú de navegación */}
+        {/* Menú */}
         <ul className={`navbar-menu ${isOpen ? 'active' : ''}`}>
           <li>
-            <Link to="/alojamientos" onClick={closeMenu}>
-              Alojamientos
-            </Link>
+            <Link to="/" onClick={closeMenu}>Home</Link>
           </li>
-          <li>
-            <Link to="/restaurantes" onClick={closeMenu}>
-              Restaurantes
-            </Link>
+
+          <li className={`has-dropdown ${isCategoriesOpen ? 'active' : ''}`}>
+            <button
+              className="dropdown-toggle"
+              onClick={toggleCategories}
+              type="button"
+            >
+              Categorías
+            </button>
+
+            <ul className={`dropdown ${isCategoriesOpen ? 'active' : ''}`}>
+              <li><Link to="/alojamientos" onClick={closeMenu}>Alojamientos</Link></li>
+              <li><Link to="/restaurantes" onClick={closeMenu}>Restaurantes</Link></li>
+              <li><Link to="/comercios" onClick={closeMenu}>Comercios</Link></li>
+              <li><Link to="/servicios" onClick={closeMenu}>Servicios</Link></li>
+            </ul>
           </li>
+
           <li>
-            <Link to="/comercios" onClick={closeMenu}>
-              Comercios
-            </Link>
-          </li>
-          <li>
-            <Link to="/servicios" onClick={closeMenu}>
-              Servicios
-            </Link>
+            <Link to="/contacto" onClick={closeMenu}>Contacto</Link>
           </li>
         </ul>
       </div>

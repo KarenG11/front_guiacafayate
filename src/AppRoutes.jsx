@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/common/ScrollToTop';
 import './App.css';
+import AlojamientosPage from './pages/AlojamientosPage';
 
 function App() {
   return (
@@ -12,7 +13,6 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Agregar más rutas aquí según sea necesario */}
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -12,11 +12,15 @@ import Login from './components/Auth/Login';
 import Registro from './components/Auth/Registro';
 import Footer from './components/Footer/Footer';
 import './App.css';
+import ContactoSection from './pages/ContactoSection';
+import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
+            <ScrollToTop />
+      
         <div className="app-wrapper">
           <Navbar />
           <main className="app-content">
@@ -30,6 +34,7 @@ function App() {
               <Route path="/turismo" element={<TurismoPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/registro" element={<Registro />} />
+              <Route path="/contacto" element={<ContactoSection isPage={true} />} />
             </Routes>
           </main>
           <Footer />

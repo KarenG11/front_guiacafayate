@@ -22,7 +22,7 @@ function QuickAccess() {
       </section>
     );
   }
-  
+
   return (
     <section className="quick-access">
       <h2 className="quick-access-title">¿Qué estás buscando?</h2>
@@ -30,7 +30,7 @@ function QuickAccess() {
       <div className="quick-access-grid">
         {categorias.map((category) => (
           <QuickAccessCard
-            key={category.id}
+            key={category._id}
             category={category}
           />
         ))}
