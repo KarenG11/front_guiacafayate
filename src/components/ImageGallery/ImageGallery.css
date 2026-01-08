@@ -1,0 +1,155 @@
+.gallery-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 420px;
+  background: #f0f0f0;
+  overflow: hidden;
+  margin: 2rem auto;
+  border-radius: 12px;
+}
+
+/* Imagen */
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Flechas */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.carousel-btn.prev {
+  left: 12px;
+}
+
+.carousel-btn.next {
+  right: 12px;
+}
+
+/* Indicadores */
+.carousel-indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 5;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: white;
+}
+
+/* ===== TEXTO SOBRE LA IMAGEN ===== */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  pointer-events: none;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.15)
+  );
+  z-index: 2;
+}
+
+.gallery-overlay h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ffd54f;
+  letter-spacing: 1px;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.gallery-overlay p {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #ffffff;
+  max-width: 600px;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+}
+
+/* NUEVOS ESTILOS PARA HOME */
+.gallery-overlay-home {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.gallery-overlay-home h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.gallery-overlay-home p {
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* 📱 Mobile y Tablet */
+@media (max-width: 768px) {
+  .gallery-carousel {
+    height: 30vh;
+    width: 90%;
+    margin: 1rem auto;
+    border-radius: 0;
+  }
+
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .carousel-btn.prev {
+    left: 5%;
+  }
+
+  .carousel-btn.next {
+    right: 5%;
+  }
+
+  .gallery-overlay {
+    padding: 0 1rem;
+  }
+
+  .gallery-overlay h2 {
+    font-size: 1.6rem;
+  }
+
+  .gallery-overlay p {
+    font-size: 0.95rem;
+  }
+}

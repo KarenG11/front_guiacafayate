@@ -3,7 +3,7 @@ import './Banner.css';
 
 function Banner() {
   const scrollToCards = () => {
-    const element = document.querySelector('.quick-access');
+    const element = document.querySelector('.gallery-overlay-home');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
