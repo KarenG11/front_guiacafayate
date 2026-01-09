@@ -64,24 +64,24 @@ function ContactoSection() {
           <input
             type="text"
             placeholder="Nombre del lugar o emprendimiento"
-            {...register("nombre", {
-              required: "El nombre es obligatorio",
+            {...register("lugar", {
+              required: "El lugar es obligatorio",
               maxLength: {
                 value: 25,
-                message: "El nombre no puede exceder los 25 caracteres",
+                message: "El lugar no puede exceder los 25 caracteres",
               },
               minLength: {
                 value: 8,
-                message: "El nombre debe tener al menos 8 caracteres",
+                message: "El lugar debe tener al menos 8 caracteres",
               },
               pattern: {
                 value: /^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/i,
-                message: "El nombre solo puede contener letras y espacios",
+                message: "El lugar solo puede contener letras y espacios",
               },
             })}
           />
-          {errors.nombre && (
-            <p className="error-message">{errors.nombre.message}</p>
+          {errors.lugar && (
+            <p className="error-message">{errors.lugar.message}</p>
           )}
 
           <select {...register("rubro", { required: true })}>
